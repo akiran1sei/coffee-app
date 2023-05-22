@@ -16,7 +16,6 @@ export default function Home() {
       </Head>
 
       <div className={styles.container}>
-        {/* <Login /> */}
         <main className={styles.main}>
           <h1 className={styles.title}>Tasting Note</h1>
         </main>
