@@ -2,6 +2,7 @@ import Head from "next/head";
 // import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,11 +21,15 @@ export default function Home() {
         <main className={styles.main}>
           <div className={styles.main_contents}>
             <div className={styles.top}>
-              <h1 className={styles.title}>Tasting Note</h1>
+              <h1 className={styles.title}>TastingNote</h1>
               <nav className={styles.top_nav}>
                 <ul className={styles.top_nav_list}>
-                  <li className={styles.top_nav_item}>新規作成</li>
-                  <li className={styles.top_nav_item}>編集ページ</li>
+                  <li className={styles.top_nav_item}>
+                    <Link href="new_select">新規作成</Link>
+                  </li>
+                  <li className={styles.top_nav_item}>
+                    <Link href="edit_select">編集ページ</Link>
+                  </li>
                   <li className={styles.top_nav_item}>MyPage</li>
                 </ul>
               </nav>
