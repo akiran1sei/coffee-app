@@ -21,7 +21,7 @@ export default function Home() {
         <main className={styles.main}>
           <div className={styles.main_contents}>
             <div className={styles.top}>
-              <h1 className={styles.title}>TastingNote</h1>
+              <h1 className={styles.title}>Tasting Note</h1>
               <nav className={styles.top_nav}>
                 <ul className={styles.top_nav_list}>
                   <li className={styles.top_nav_item}>
