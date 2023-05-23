@@ -26,17 +26,19 @@ export default function Home() {
               {/* <SelectPc />
       <SelectSp /> */}
               <div className={styles.edit_select_list}>
-                <div className={styles.edit_select_number}>1</div>
+                <div className={styles.edit_select_number}>
+                  <p>1</p>
+                </div>
                 <button className={styles.edit_select_btn}>
-                  <Link href="edit_page">
-                    <Image
-                      src="../images/edit_FILL0_wght400_GRAD0_opsz48.svg"
-                      alt="編集画像"
-                      width={48}
-                      height={48}
-                      priority
-                    />
-                  </Link>
+                  {/* <Link href="edit_page"> */}
+                  <Image
+                    src="../images/edit_FILL0_wght400_GRAD0_opsz48.svg"
+                    alt="編集画像"
+                    width={48}
+                    height={48}
+                    priority
+                  />
+                  {/* </Link> */}
                 </button>
                 <div
                   className={`${styles.edit_select_item} ${styles.edit_select_coffee}`}
@@ -45,8 +47,8 @@ export default function Home() {
                     htmlFor="name"
                     className={styles.edit_select_item_title}
                   >
-                    {/* 珈琲豆の名 or 番号 */}
-                    NAME or NUMBER
+                    珈琲豆の名 or 番号
+                    {/* NAME or NUMBER */}
                   </label>
                   <div className={styles.edit_select_item_value}>
                     深き日子山ブレンド豆
@@ -59,8 +61,8 @@ export default function Home() {
                     htmlFor="roast"
                     className={styles.edit_select_item_title}
                   >
-                    {/* ロースト */}
-                    ROAST
+                    ロースト
+                    {/* ROAST */}
                   </label>
                   <div className={styles.edit_select_item_value}>７８％</div>
                 </div>
@@ -71,8 +73,8 @@ export default function Home() {
                     htmlFor="aroma"
                     className={styles.edit_select_item_title}
                   >
-                    {/* アロマ */}
-                    AROMA
+                    アロマ
+                    {/* AROMA */}
                   </label>
                   <div className={styles.edit_select_item_value}>
                     <p className={styles.edit_select_aroma_value}>D：2</p>
@@ -87,8 +89,8 @@ export default function Home() {
                     htmlFor="defects"
                     className={styles.edit_select_item_title}
                   >
-                    {/* 欠点・瑕疵 */}
-                    DEFECTS
+                    欠点・瑕疵
+                    {/* DEFECTS */}
                   </label>
                   <div className={styles.edit_select_item_value}>０点</div>
                 </div>
@@ -99,8 +101,8 @@ export default function Home() {
                     htmlFor="cleancap"
                     className={styles.edit_select_item_title}
                   >
-                    {/* カップの綺麗さ */}
-                    CLEAN CAP
+                    カップの綺麗さ
+                    {/* CLEAN CAP */}
                   </label>
                   <div className={styles.edit_select_item_value}>７点</div>
                 </div>
@@ -111,8 +113,8 @@ export default function Home() {
                     htmlFor="sweet"
                     className={styles.edit_select_item_title}
                   >
-                    {/* 甘さ */}
-                    SWEET
+                    甘さ
+                    {/* SWEET */}
                   </label>
                   <div className={styles.edit_select_item_value}>７点</div>
                 </div>
@@ -123,8 +125,8 @@ export default function Home() {
                     htmlFor="acidity"
                     className={styles.edit_select_item_title}
                   >
-                    {/* 酸の質 */}
-                    ACIDITY
+                    酸の質
+                    {/* ACIDITY */}
                   </label>
                   <div className={styles.edit_select_item_value}>７点</div>
                 </div>
@@ -135,8 +137,8 @@ export default function Home() {
                     htmlFor="mouthfeel"
                     className={styles.edit_select_item_title}
                   >
-                    {/* 口に含んだ質感 */}
-                    MOUTHFEEL
+                    口に含んだ質感
+                    {/* MOUTHFEEL */}
                   </label>
                   <div className={styles.edit_select_item_value}>７点</div>
                 </div>
@@ -147,8 +149,8 @@ export default function Home() {
                     htmlFor="flavor"
                     className={styles.edit_select_item_title}
                   >
-                    {/* フレーバー */}
-                    FLAVOR
+                    フレーバー
+                    {/* FLAVOR */}
                   </label>
                   <div className={styles.edit_select_item_value}>７点</div>
                 </div>
@@ -159,8 +161,8 @@ export default function Home() {
                     htmlFor="after"
                     className={styles.edit_select_item_title}
                   >
-                    {/* 後味の印象度 */}
-                    AFTER
+                    後味の印象度
+                    {/* AFTER */}
                   </label>
                   <div className={styles.edit_select_item_value}>７点</div>
                 </div>
@@ -169,8 +171,8 @@ export default function Home() {
                     htmlFor="balance"
                     className={styles.edit_select_item_title}
                   >
-                    {/* バランス */}
-                    BALANCE
+                    バランス
+                    {/* BALANCE */}
                   </label>
                   <div className={styles.edit_select_item_value}>７点</div>
                 </div>
@@ -181,8 +183,8 @@ export default function Home() {
                     htmlFor="overall"
                     className={styles.edit_select_item_title}
                   >
-                    {/* 総合評価 */}
-                    OVER ALL
+                    総合評価
+                    {/* OVER ALL */}
                   </label>
                   <div className={styles.edit_select_item_value}>７点</div>
                 </div>
@@ -204,8 +206,8 @@ export default function Home() {
                     htmlFor="impression"
                     className={styles.edit_select_item_title}
                   >
-                    {/* 味の印象 */}
-                    IMPRESSION
+                    味の印象
+                    {/* IMPRESSION */}
                   </label>
                   <div className={styles.edit_select_item_value}>
                     深みのあるコクと口の中で広がる香ばしい香り、それでいて後味がスッキリとしたブレンド珈琲だった。
