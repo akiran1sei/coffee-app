@@ -283,21 +283,26 @@
   text-align: center;
 }
 /*-----.edit_select_list-----*/
-.edit_select_list {
+. {
   width: 100%;
   min-width: 300px;
   /* display: none; */
-  display: flex;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  /* display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   gap: 0.5rem;
   margin: 2rem auto;
   position: relative;
   padding: 0.5rem;
-  background: var(--color-bg-yellow-light);
+  border: 1px solid var(--color-yellow);
   z-index: 0;
   /* opacity: 0; */
 }
@@ -343,11 +348,7 @@
   display: block;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
-  .edit_select_item:not(.edit_select-name, .edit_select-impression) {
-    width: auto;
-  }
-}
+
 .edit_select_item_title,
 .edit_select_sp_item_title {
   font-size: 16px;
@@ -362,7 +363,7 @@
   font-size: 14px;
 }
 
-/*-----edit_select_sp_list-----*/
+/* -----edit_select_sp_list-----
 .edit_select_sp_list {
   width: 300px;
   margin: 2rem auto;
@@ -391,7 +392,7 @@
   .edit_select_sp_list {
     display: none;
   }
-}
+} */
 
 /* edit */
 
@@ -503,7 +504,7 @@
 .edit_item.acidity {
   justify-content: flex-start !important;
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .edit_item:not(.edit_item:first-child, .edit_item:nth-child(14)) {
     width: 300px;
   }
@@ -516,7 +517,7 @@
   .edit_item:nth-child(13) {
     width: 100% !important;
   }
-}
+} */
 /* edit_item_name_input */
 .edit_item_name_input {
   width: 90%;
@@ -669,96 +670,114 @@
   color: red;
 }
 /* grid-layout 768px*/
+
+.edit_select_btn {
+  width: 20px;
+  height: auto;
+}
 @media screen and (min-width: 768px) and (max-width: 1000px) {
-  .coffee_name {
-    grid-area: 1/1/2/3;
+  .edit_select_number {
+    grid-area: 1/1/2/7;
   }
-  .roast {
+  .edit_select_btn {
     grid-area: 2/1/3/2;
   }
-  .aroma {
-    grid-area: 2/2/3/3;
+  .edit_select_coffee {
+    /* grid-area: 1/1/2/3; */
+    grid-area: 2/2/3/6;
   }
-  .defects {
+  .edit_select_roast {
     grid-area: 3/1/4/2;
   }
-  .cleancap {
+  .edit_select_aroma {
     grid-area: 3/2/4/3;
   }
-  .sweet {
+  .edit_select_defects {
+    grid-area: 3/3/4/4;
+  }
+  .edit_select_cleancap {
+    grid-area: 3/4/4/5;
+  }
+  .edit_select_sweet {
+    grid-area: 3/5/4/6;
+  }
+  .edit_select_acidity {
+    grid-area: 3/6/4/7;
+  }
+  .edit_select_mouthfeel {
     grid-area: 4/1/5/2;
   }
-  .acidity {
+  .edit_select_flavor {
     grid-area: 4/2/5/3;
   }
-  .mouthfeel {
-    grid-area: 5/1/6/2;
+  .edit_select_after {
+    grid-area: 4/3/5/4;
   }
-  .flavor {
-    grid-area: 5/2/6/3;
+  .edit_select_balance {
+    grid-area: 4/4/5/5;
   }
-  .after {
-    grid-area: 6/1/7/2;
+  .edit_select_overall {
+    grid-area: 4/5/5/6;
   }
-  .balance {
-    grid-area: 6/2/7/3;
+  .edit_select_total {
+    grid-area: 2/6/3/7;
   }
-  .overall {
-    grid-area: 7/1/8/3;
+  .edit_select_impression {
+    grid-area: 5/1/6/7;
   }
-  .total {
-    grid-area: 8/1/8/3;
-  }
-  .impression {
-    grid-area: 9/1/10/3;
-  }
-  .edit_error {
+  /* .edit_error {
     grid-area: 10/1/11/3;
-  }
+  } */
 }
 /* grid-layout 1000px*/
 @media screen and (min-width: 1000px) {
-  .coffee_name {
-    grid-area: 1/1/2/4;
+  .edit_select_number {
+    grid-area: 1/1/4/2;
   }
-  .roast {
+  .edit_select_btn {
+    grid-area: 1/2/2/3;
+  }
+  .edit_select_coffee {
+    grid-area: 1/3/2/12;
+  }
+  /* .edit_select_roast {
     grid-area: 2/1/3/2;
   }
-  .aroma {
+  .edit_select_aroma {
     grid-area: 2/2/3/3;
   }
-  .defects {
+  .edit_select_defects {
     grid-area: 2/3/3/4;
   }
-  .cleancap {
+  .edit_select_cleancap {
     grid-area: 3/1/4/2;
   }
-  .sweet {
+  .edit_select_sweet {
     grid-area: 3/2/4/3;
   }
-  .acidity {
+  .edit_select_acidity {
     grid-area: 3/3/4/4;
   }
-  .mouthfeel {
+  .edit_select_mouthfeel {
     grid-area: 4/1/5/2;
   }
-  .flavor {
+  .edit_select_flavor {
     grid-area: 4/2/5/3;
   }
-  .after {
+  .edit_select_after {
     grid-area: 4/3/5/4;
   }
-  .balance {
+  .edit_select_balance {
     grid-area: 5/1/6/2;
   }
-  .overall {
+  .edit_select_overall {
     grid-area: 5/2/6/3;
+  } */
+  .edit_select_total {
+    grid-area: 1/12/2/13;
   }
-  .total {
-    grid-area: 6/2/7/3;
-  }
-  .impression {
-    grid-area: 7/1/7/4;
+  .edit_select_impression {
+    grid-area: 3/2/4/13;
   }
   .edit_error {
     width: 100%;
