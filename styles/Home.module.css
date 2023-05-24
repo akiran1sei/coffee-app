@@ -77,7 +77,6 @@
 .main {
   width: 100%;
   height: auto;
-  position: relative;
   margin: calc(60px + 2rem) auto 0;
 }
 @media screen and (min-width: 768px) {
@@ -164,14 +163,14 @@
 .button_item:nth-child(2) {
   margin: 7px auto;
 }
-.open .button_item:nth-child(1) {
+.active .button_item:nth-child(1) {
   transform: rotate(45deg) translateY(2px);
 }
-.open .button_item:nth-child(2) {
+.active .button_item:nth-child(2) {
   transform: translateX(50px);
   margin: 0;
 }
-.open .button_item:nth-child(3) {
+.active .button_item:nth-child(3) {
   transform: rotate(-45deg) translateY(-2px);
 }
 
@@ -195,14 +194,14 @@
 .menu {
   display: none;
 }
-.open .menu {
+.active.menu {
   width: 100%;
   height: 100vh;
   max-width: 320px;
   display: block;
   background: var(--color-bg-yellow);
   position: absolute;
-  top: 60px;
+  top: 100px;
   right: 0;
   bottom: 0;
 }
@@ -214,6 +213,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr auto;
   margin: 0 1rem;
+  padding-top: 2rem;
   box-shadow: 2px 2px 2px #3333;
 }
 .menu_item {
@@ -293,7 +293,6 @@
 /*-----.edit_select_list-----*/
 .edit_select_list {
   width: 100%;
-  min-width: 300px;
   display: grid;
   grid-template: 1fr / 1fr;
   align-content: center;
@@ -686,4 +685,22 @@
     width: 100%;
     grid-area: 8/1/9/4;
   }
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+
+.active.menu {
+  display: block;
 }
