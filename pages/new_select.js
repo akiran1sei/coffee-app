@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Header } from "../components/Header";
-import { Edit } from "../components/Edit";
+import { New } from "../components/New";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
@@ -20,11 +20,7 @@ export default function Home() {
       <div className={styles.container}>
         <Header />
         <main className={styles.main}>
-          <Edit />
-          <Edit />
-          <Edit />
-          <Edit />
-          <Edit />
+          <New />
         </main>
       </div>
     </>
