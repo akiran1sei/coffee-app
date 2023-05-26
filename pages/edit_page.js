@@ -2,10 +2,16 @@ import Head from "next/head";
 import { Header } from "../components/Header";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-
+import React, { useState } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openButton = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <Head>
@@ -23,7 +29,12 @@ export default function Home() {
               <div className={styles.edit_number}>
                 <div className={styles.edit_toc}>
                   <button
-                  // onClick={tocOpen}
+                    className={
+                      isOpen
+                        ? `${styles["button"]} ${styles["open"]}`
+                        : styles["button"]
+                    }
+                    onClick={openButton}
                   >
                     編集目次<span className={styles.edit_toc_open}>▼</span>
                     <span className={styles.edit_toc_close}>△</span>
