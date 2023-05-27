@@ -460,7 +460,6 @@
 */
 .edit_list {
   width: 100%;
-  min-width: 300px;
   height: auto;
   display: grid;
   align-items: flex-start;
@@ -480,7 +479,7 @@
 }
 @media screen and (min-width: 1000px) {
   .edit_list {
-    width: 1000px;
+    max-width: 1000px;
   }
 }
 
