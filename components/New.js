@@ -53,12 +53,11 @@ export function New() {
               <label htmlFor="coffee-name" className={styles.edit_item_title}>
                 1：珈琲豆 or 番号
               </label>
-
               <input
                 className={styles.edit_item_name_input}
                 type="text"
                 name="coffee-name"
-                id=""
+                id="coffee-name"
                 width={300}
                 height={50}
                 placeholder="名前 or 番号"
@@ -74,7 +73,7 @@ export function New() {
                 <input
                   type="range"
                   name="roast"
-                  id=""
+                  id="roast"
                   className={styles.edit_roast_gradient}
                   // value={roast}
                   onChange={(e) => setRoast(e.target.value)}
@@ -86,12 +85,12 @@ export function New() {
                 </p>
               </div>
               <div className={styles.edit_item_message_box}>
-                memo
+                <label htmlFor="roast-message">memo</label>
                 <br />
                 <textarea
                   className={styles.edit_item_message}
-                  name="roast"
-                  id=""
+                  name="roast-message"
+                  id="roast-message"
                   placeholder="ご記入ください。"
                   // value={roastMessage}
                   onChange={(e) => setRoastMessage(e.target.value)}
@@ -99,16 +98,13 @@ export function New() {
               </div>
             </div>
             <div className={`${styles.edit_item} ${styles.aroma}`}>
-              <label htmlFor="aroma" className={styles.edit_item_title}>
-                3：アロマ
-              </label>
-
+              <p className={styles.edit_item_title}>3：アロマ </p>
               <div className={styles.edit_item_value_box}>
                 <p className={styles.edit_item_value}>
-                  ドライ －３～３
+                  <label htmlFor="aroma-dry">ドライ </label>－３～３
                   <select
-                    name="aroma"
-                    id=""
+                    name="aroma-dry"
+                    id="aroma-dry"
                     // value={aromaDry}
                     onChange={(e) => setAromaDry(e.target.value)}
                   >
@@ -124,10 +120,10 @@ export function New() {
                 </p>
 
                 <p className={styles.edit_item_value}>
-                  クラスト －３～３
+                  <label htmlFor="aroma-crust">クラスト</label> －３～３
                   <select
-                    name="aroma"
-                    id=""
+                    name="aroma-crust"
+                    id="aroma-crust"
                     // value={aromaCrust}
                     onChange={(e) => setAromaCrust(e.target.value)}
                   >
@@ -143,10 +139,10 @@ export function New() {
                 </p>
 
                 <p className={styles.edit_item_value}>
-                  ブレーク －３～３
+                  <label htmlFor="aroma-break">ブレーク</label> －３～３
                   <select
-                    name="aroma"
-                    id=""
+                    name="aroma-break"
+                    id="aroma-break"
                     // value={aromaBreak}
                     onChange={(e) => setAromaBreak(e.target.value)}
                   >
@@ -161,14 +157,13 @@ export function New() {
                   </select>
                 </p>
               </div>
-
               <div className={styles.edit_item_message_box}>
-                memo
+                <label htmlFor="aroma-message">memo</label>
                 <br />
                 <textarea
                   className={styles.edit_item_message}
-                  name="aroma"
-                  id=""
+                  name="aroma-message"
+                  id="aroma-message"
                   placeholder="ご記入ください。"
                   // value={aromaMessage}
                   onChange={(e) => setAromaMessage(e.target.value)}
@@ -218,17 +213,18 @@ export function New() {
                 <input
                   type="number"
                   name="defects"
+                  id="defects"
                   className={styles.edit_item_box}
                   // value={defects}
                   onChange={(e) => setDefects(e.target.value)}
                 />
                 <div className={styles.edit_item_message_box}>
-                  memo
+                  <label htmlFor="defects-message"></label>memo
                   <br />
                   <textarea
                     className={styles.edit_item_message}
-                    name="defects"
-                    id=""
+                    name="defects-message"
+                    id="defects-message"
                     placeholder="ご記入ください。"
                     // value={defectsMessage}
                     onChange={(e) => setDefectsMessage(e.target.value)}
@@ -246,7 +242,7 @@ export function New() {
                   <select
                     type="number"
                     name="cleancap"
-                    id=""
+                    id="cleancap"
                     className={styles.edit_item_box}
                     // value={cleancap}
                     onChange={(e) => setCleancap(e.target.value)}
@@ -267,12 +263,14 @@ export function New() {
                 </div>
 
                 <div className={styles.edit_item_message_box}>
-                  memo
+                  <label htmlFor="cleancap-message">
+                    <label htmlFor="cleancap-message">memo</label>
+                  </label>
                   <br />
                   <textarea
                     className={styles.edit_item_message}
-                    name="cleancap"
-                    id=""
+                    name="cleancap-message"
+                    id="cleancap-message"
                     placeholder="ご記入ください。"
                     // value={cleancapMessage}
                     onChange={(e) => setCleancapMessage(e.target.value)}
@@ -290,7 +288,7 @@ export function New() {
                   <select
                     type="number"
                     name="sweet"
-                    id=""
+                    id="sweet"
                     className={styles.edit_item_box}
                     // value={sweet}
                     onChange={(e) => setSweet(e.target.value)}
@@ -309,14 +307,13 @@ export function New() {
                     <option value={8}>8</option>
                   </select>
                 </div>
-
                 <div className={styles.edit_item_message_box}>
-                  memo
+                  <label htmlFor="sweet-message">memo</label>
                   <br />
                   <textarea
                     className={styles.edit_item_message}
-                    name="sweet"
-                    id=""
+                    name="sweet-message"
+                    id="sweet-message"
                     placeholder="ご記入ください。"
                     // value={sweetMessage}
                     onChange={(e) => setSweetMessage(e.target.value)}
@@ -328,14 +325,13 @@ export function New() {
               <label htmlFor="acidity" className={styles.edit_item_title}>
                 7：酸の質
               </label>
-
               <div className={styles.edit_item_value_box}>
                 <div className={styles.edit_item_value}>
                   ０～８
                   <select
                     type="number"
                     name="acidity"
-                    id=""
+                    id="acidity"
                     className={styles.edit_item_box}
                     // value={acidity}
                     onChange={(e) => setAcidity(e.target.value)}
@@ -381,16 +377,15 @@ export function New() {
             </div>
             <div className={`${styles.edit_item} ${styles.mouthfeel}`}>
               <label htmlFor="mouthfeel" className={styles.edit_item_title}>
-                8：口に含んだ質感
+                8：口に含んだ質感{" "}
               </label>
-
               <div className={styles.edit_item_value_box}>
                 <div className={styles.edit_item_value}>
                   ０～８
                   <select
                     type="number"
                     name="mouthfeel"
-                    id=""
+                    id="mouthfeel"
                     className={styles.edit_item_box}
                     // value={mouthfeel}
                     onChange={(e) => setMouthfeel(e.target.value)}
@@ -444,7 +439,7 @@ export function New() {
                   <select
                     name="flavor"
                     type="number"
-                    id=""
+                    id="flavor"
                     className={styles.edit_item_box}
                     // value={flavor}
                     onChange={(e) => setFlavor(e.target.value)}
@@ -464,12 +459,12 @@ export function New() {
                   </select>
                 </div>
                 <div className={styles.edit_item_message_box}>
-                  memo
+                  <label htmlFor="flavor-message">memo</label>
                   <br />
                   <textarea
                     className={styles.edit_item_message}
-                    name="flavor"
-                    id=""
+                    name="flavor-message"
+                    id="flavor-message"
                     placeholder="ご記入ください。"
                     // value={flavorMessage}
                     onChange={(e) => setFlavorMessage(e.target.value)}
@@ -480,16 +475,15 @@ export function New() {
 
             <div className={`${styles.edit_item} ${styles.after}`}>
               <label htmlFor="after" className={styles.edit_item_title}>
-                10：後味の印象度
+                10：後味の印象度{" "}
               </label>
-
               <div className={styles.edit_item_value_box}>
                 <div className={styles.edit_item_value}>
                   ０～８
                   <select
                     name="after"
                     type="number"
-                    id=""
+                    id="after"
                     className={styles.edit_item_box}
                     // value={after}
                     onChange={(e) => setAfter(e.target.value)}
@@ -510,12 +504,12 @@ export function New() {
                 </div>
 
                 <div className={styles.edit_item_message_box}>
-                  memo
+                  <label htmlFor="after-message">memo</label>
                   <br />
                   <textarea
                     className={styles.edit_item_message}
-                    name="after"
-                    id=""
+                    name="after-message"
+                    id="after-message"
                     placeholder="ご記入ください。"
                     // value={afterMessage}
                     onChange={(e) => setAfterMessage(e.target.value)}
@@ -525,16 +519,15 @@ export function New() {
             </div>
             <div className={`${styles.edit_item} ${styles.balance}`}>
               <label htmlFor="balance" className={styles.edit_item_title}>
-                11：バランス
+                11：バランス{" "}
               </label>
-
               <div className={styles.edit_item_value_box}>
                 <div className={styles.edit_item_value}>
                   ０～８
                   <select
                     name="balance"
                     type="number"
-                    id=""
+                    id="balance"
                     className={styles.edit_item_box}
                     // value={balance}
                     onChange={(e) => setBalance(e.target.value)}
@@ -559,14 +552,13 @@ export function New() {
               <label htmlFor="overall" className={styles.edit_item_title}>
                 12：総合評価
               </label>
-
               <div className={styles.edit_item_value_box}>
                 <div className={styles.edit_item_value}>
                   ０～８
                   <select
                     name="overall"
                     type="number"
-                    id=""
+                    id="overall"
                     className={styles.edit_item_box}
                     // value={overall}
                     onChange={(e) => setOverall(e.target.value)}
@@ -591,7 +583,6 @@ export function New() {
               <label htmlFor="total" className={styles.edit_item_title}>
                 13：TOTAL（+36）
               </label>
-
               <div className={styles.edit_result}>
                 <p>下記の空白に項目４～１２を加算した数字が出力。</p>
                 <button
@@ -610,23 +601,28 @@ export function New() {
                   <span className={styles.edit_basic}>＋３６</span>
                 </div>
                 <p>TOTAL値</p>
-                <output htmlFor="addition" className={styles.edit_total}>
+                <output></output>
+                <output
+                  htmlFor="addition"
+                  id="total"
+                  className={styles.edit_total}
+                >
                   {/* {result + 36} */}
                 </output>
+                <input type="number" id="total" />
               </div>
             </div>
             <div className={`${styles.edit_item} ${styles.impression}`}>
               <label htmlFor="impression" className={styles.edit_item_title}>
-                14：味の印象
+                14：味の印象{" "}
               </label>
-
               <div className={styles.edit_item_message_box}>
                 memo
                 <br />
                 <textarea
                   className={styles.edit_item_message}
                   name="impression"
-                  id=""
+                  id="impression"
                 ></textarea>
               </div>
             </div>
