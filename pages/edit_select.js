@@ -166,7 +166,9 @@ export default function Home() {
                   </label>
                   <div className={styles.edit_select_item_value}>７点</div>
                 </div>
-                <div className={`${styles.edit_select_item} ${styles.balance}`}>
+                <div
+                  className={`${styles.edit_select_item} ${styles.edit_select_balance}`}
+                >
                   <label
                     htmlFor="balance"
                     className={styles.edit_select_item_title}

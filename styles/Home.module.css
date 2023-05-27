@@ -760,19 +760,19 @@
 
 /* grid-layout 768px*/
 @media screen and (min-width: 768px) and (max-width: 1000px) {
-  .coffee_name {
+  .edit_coffee {
     grid-area: 1/1/2/3;
   }
-  .roast {
+  .edit_roast {
     grid-area: 2/1/3/2;
   }
-  .aroma {
+  .edit_aroma {
     grid-area: 2/2/3/3;
   }
-  .defects {
+  .edit_defects {
     grid-area: 3/1/4/2;
   }
-  .cleancap {
+  .edit_cleancap {
     grid-area: 3/2/4/3;
   }
   .sweet {
@@ -808,19 +808,19 @@
 }
 /* grid-layout 1000px*/
 @media screen and (min-width: 1000px) {
-  .coffee_name {
+  .edit_coffee {
     grid-area: 1/1/2/4;
   }
-  .roast {
+  .edit_roast {
     grid-area: 2/1/3/2;
   }
-  .aroma {
+  .edit_aroma {
     grid-area: 2/2/3/3;
   }
-  .defects {
+  .edit_defects {
     grid-area: 2/3/3/4;
   }
-  .cleancap {
+  .edit_cleancap {
     grid-area: 3/1/4/2;
   }
   .sweet {

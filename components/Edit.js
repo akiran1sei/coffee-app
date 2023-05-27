@@ -1,17 +1,20 @@
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import Image from "next/image";
 import { useState } from "react";
+// import Image from "next/image";
 // import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export function Edit() {
   return (
     <div className={styles.edit_page}>
-      <div className={styles.edit}>
+      <div
+        // className={styles.edit}
+        className={`${styles.edit} ${styles.open}`}
+      >
         <div className={styles.edit_number}>
           <div className={styles.edit_toc}>
-            <button>
+            <button className={styles.button}>
               編集目次<span className={styles.edit_toc_open}>▼</span>
               <span className={styles.edit_toc_close}>△</span>
             </button>
@@ -49,23 +52,23 @@ export function Edit() {
                 > */}
           <div className={styles.edit_list}>
             {/* 選択式 */}
-            <div className={`${styles.edit_item} ${styles.coffee_name}`}>
-              <label htmlFor="coffee-name" className={styles.edit_item_title}>
+            <div className={`${styles.edit_item} ${styles.edit_coffee}`}>
+              <label htmlFor="coffee" className={styles.edit_item_title}>
                 1：珈琲豆 or 番号
               </label>
               <input
                 className={styles.edit_item_name_input}
                 type="text"
-                name="coffee-name"
-                id="coffee-name"
+                name="coffee"
+                id="coffee"
                 width={300}
                 height={50}
                 placeholder="名前 or 番号"
-                // value={name}
+                // value={coffee}
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
-            <div className={`${styles.edit_item} ${styles.roast}`}>
+            <div className={`${styles.edit_item} ${styles.edit_roast}`}>
               <label htmlFor="roast" className={styles.edit_item_title}>
                 2：ロースト
               </label>
@@ -97,7 +100,7 @@ export function Edit() {
                 ></textarea>
               </div>
             </div>
-            <div className={`${styles.edit_item} ${styles.aroma}`}>
+            <div className={`${styles.edit_item} ${styles.edit_aroma}`}>
               <p className={styles.edit_item_title}>3：アロマ </p>
               <div className={styles.edit_item_value_box}>
                 <p className={styles.edit_item_value}>
@@ -170,7 +173,7 @@ export function Edit() {
                 ></textarea>
               </div>
             </div>
-            <div className={`${styles.edit_item} ${styles.defects}`}>
+            <div className={`${styles.edit_item} ${styles.edit_defects}`}>
               <label htmlFor="defects" className={styles.edit_item_title}>
                 4：欠点・瑕疵
               </label>
@@ -232,7 +235,7 @@ export function Edit() {
                 </div>
               </div>
             </div>
-            <div className={`${styles.edit_item} ${styles.cleancap}`}>
+            <div className={`${styles.edit_item} ${styles.edit_cleancap}`}>
               <label htmlFor="cleancap" className={styles.edit_item_title}>
                 5：カップの綺麗さ
               </label>
@@ -278,7 +281,7 @@ export function Edit() {
                 </div>
               </div>
             </div>
-            <div className={`${styles.edit_item} ${styles.sweet}`}>
+            <div className={`${styles.edit_item}${styles.edit_sweet}`}>
               <label htmlFor="sweet" className={styles.edit_item_title}>
                 6：甘さ
               </label>
@@ -321,7 +324,7 @@ export function Edit() {
                 </div>
               </div>
             </div>
-            <div className={`${styles.edit_item} ${styles.acidity}`}>
+            <div className={`${styles.edit_item}${styles.edit_acidity}`}>
               <label htmlFor="acidity" className={styles.edit_item_title}>
                 7：酸の質
               </label>
@@ -375,7 +378,7 @@ export function Edit() {
                 </div>
               </div>
             </div>
-            <div className={`${styles.edit_item} ${styles.mouthfeel}`}>
+            <div className={`${styles.edit_item}${styles.edit_mouthfeel}`}>
               <label htmlFor="mouthfeel" className={styles.edit_item_title}>
                 8：口に含んだ質感{" "}
               </label>
@@ -429,7 +432,7 @@ export function Edit() {
                 </div>
               </div>
             </div>
-            <div className={`${styles.edit_item} ${styles.flavor}`}>
+            <div className={`${styles.edit_item}${styles.edit_flavor}`}>
               <label htmlFor="flavor" className={styles.edit_item_title}>
                 9：フレーバー
               </label>
@@ -473,7 +476,7 @@ export function Edit() {
               </div>
             </div>
 
-            <div className={`${styles.edit_item} ${styles.after}`}>
+            <div className={`${styles.edit_item}${styles.edit_after}`}>
               <label htmlFor="after" className={styles.edit_item_title}>
                 10：後味の印象度{" "}
               </label>
@@ -517,7 +520,7 @@ export function Edit() {
                 </div>
               </div>
             </div>
-            <div className={`${styles.edit_item} ${styles.balance}`}>
+            <div className={`${styles.edit_item}${styles.edit_balance}`}>
               <label htmlFor="balance" className={styles.edit_item_title}>
                 11：バランス{" "}
               </label>
@@ -548,7 +551,7 @@ export function Edit() {
                 </div>
               </div>
             </div>
-            <div className={`${styles.edit_item} ${styles.overall}`}>
+            <div className={`${styles.edit_item}${styles.edit_overall}`}>
               <label htmlFor="overall" className={styles.edit_item_title}>
                 12：総合評価
               </label>
@@ -579,7 +582,7 @@ export function Edit() {
                 </div>
               </div>
             </div>
-            <div className={`${styles.edit_item} ${styles.total}`}>
+            <div className={`${styles.edit_item}${styles.edit_total}`}>
               <label htmlFor="total" className={styles.edit_item_title}>
                 13：TOTAL（+36）
               </label>
@@ -612,7 +615,7 @@ export function Edit() {
                 <input type="number" id="total" />
               </div>
             </div>
-            <div className={`${styles.edit_item} ${styles.impression}`}>
+            <div className={`${styles.edit_item}${styles.edit_impression}`}>
               <label htmlFor="impression" className={styles.edit_item_title}>
                 14：味の印象{" "}
               </label>
