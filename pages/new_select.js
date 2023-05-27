@@ -1,13 +1,13 @@
 import Head from "next/head";
 import { Header } from "../components/Header";
-import { New } from "../components/New";
+import { Edit } from "../components/Edit";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import Image from "next/image";
-import Link from "next/link";
+// import Image from "next/image";
+// import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function NewPage() {
   return (
     <>
       <Head>
@@ -20,9 +20,10 @@ export default function Home() {
       <div className={styles.container}>
         <Header />
         <main className={styles.main}>
-          <New />
+          <Edit />
         </main>
       </div>
     </>
   );
 }
+// Home();
