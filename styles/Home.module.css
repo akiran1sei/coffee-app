@@ -467,6 +467,7 @@
   align-content: center;
   gap: 1rem;
   justify-content: center;
+  justify-items: center;
   margin: 2rem auto;
   text-align: center;
   border: 1px solid var(--color-yellow);
@@ -611,7 +612,7 @@
 }
 
 /* edit_total */
-.edit_total {
+.edit_total_value {
   min-width: 100px;
   height: 100px;
   background: var(--color-bg-base);
@@ -627,8 +628,8 @@
   height: 50px;
   border: 2px solid var(--color-yellow);
 }
-/* edit_subtotal */
-.edit_subtotal {
+/* edit_sub_value */
+.edit_sub_value {
   min-width: 50px;
   height: 50px;
   line-height: 50px;
@@ -775,31 +776,31 @@
   .edit_cleancap {
     grid-area: 3/2/4/3;
   }
-  .sweet {
+  .edit_sweet {
     grid-area: 4/1/5/2;
   }
-  .acidity {
+  .edit_acidity {
     grid-area: 4/2/5/3;
   }
-  .mouthfeel {
+  .edit_mouthfeel {
     grid-area: 5/1/6/2;
   }
-  .flavor {
+  .edit_flavor {
     grid-area: 5/2/6/3;
   }
-  .after {
+  .edit_after {
     grid-area: 6/1/7/2;
   }
-  .balance {
+  .edit_balance {
     grid-area: 6/2/7/3;
   }
-  .overall {
+  .edit_overall {
     grid-area: 7/1/8/3;
   }
-  .total {
+  .edit_total {
     grid-area: 8/1/8/3;
   }
-  .impression {
+  .edit_impression {
     grid-area: 9/1/10/3;
   }
   .edit_error {
@@ -823,28 +824,28 @@
   .edit_cleancap {
     grid-area: 3/1/4/2;
   }
-  .sweet {
+  .edit_sweet {
     grid-area: 3/2/4/3;
   }
-  .acidity {
+  .edit_acidity {
     grid-area: 3/3/4/4;
   }
-  .mouthfeel {
+  .edit_mouthfeel {
     grid-area: 4/1/5/2;
   }
-  .flavor {
+  .edit_flavor {
     grid-area: 4/2/5/3;
   }
-  .after {
+  .edit_after {
     grid-area: 4/3/5/4;
   }
-  .balance {
+  .edit_balance {
     grid-area: 5/1/6/2;
   }
-  .overall {
+  .edit_overall {
     grid-area: 5/2/6/3;
   }
-  .total {
+  .edit_total {
     grid-area: 6/2/7/3;
   }
   .impression {

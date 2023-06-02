@@ -626,7 +626,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className={`${styles.edit_item}${styles.edit_total}`}>
+                  <div className={`${styles.edit_item} ${styles.edit_total}`}>
                     <label htmlFor="total" className={styles.edit_item_title}>
                       13：TOTAL（+36）
                     </label>
@@ -642,7 +642,7 @@ export default function Home() {
                       <div className={styles.edit_addition}>
                         <input
                           type="number"
-                          className={styles.edit_subtotal}
+                          className={styles.edit_sub_value}
                           // value={result}
                           // onChange={handleCalculation}
                         />
