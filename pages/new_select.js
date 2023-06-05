@@ -218,17 +218,21 @@ export default function NewPage() {
                           type="range"
                           name="roast"
                           id="roast"
-                          className={styles.edit_roast_gradient}
                           value={roast}
+                          list="roast_value"
                           onChange={(e) => setRoast(e.target.value)}
                         />
-                        <p className={styles.edit_roast_value}>%</p>
-                        <p>
-                          <span className={styles.edit_roast_lightly}>
-                            Lightly
-                          </span>
-                          ➡<span className={styles.edit_roast_dark}>dark</span>
-                        </p>
+                        <datalist id="roast_value">
+                          <option value="0">ライト</option>
+                          <option value="15">シナモン</option>
+                          <option value="30">ミディアム</option>
+                          <option value="45">ハイ</option>
+                          <option value="60">シティ</option>
+                          <option value="75">フルシティ</option>
+                          <option value="90">フレンチ</option>
+                          <option value="100">イタリアン</option>
+                        </datalist>
+                        <p className={styles.edit_roast_value}>{roast}%</p>
                       </div>
                       <div className={styles.edit_item_message_box}>
                         <label htmlFor="roast-message">memo</label>

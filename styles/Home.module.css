@@ -352,6 +352,7 @@
   color: var(--color-font-yellow);
   text-align: start;
 }
+
 /* edit_number_list */
 .edit_number_list {
   display: none;
@@ -367,6 +368,11 @@
 }
 .edit_number_item {
   width: 300px;
+}
+@media screen and (min-width: 1000px) {
+  .edit_number_list {
+    text-align: center;
+  }
 }
 /* 
 
@@ -550,30 +556,7 @@
   width: 90%;
   height: 150px;
 }
-/* edit_roast_gradient  */
-.edit_roast_gradient {
-  width: 120px;
-  background: linear-gradient(
-    90deg,
-    #caa571 0%,
-    #b88b53 15%,
-    #ab7b48 30%,
-    #9e6c3c 45%,
-    #956843 60%,
-    #8b674c 75%,
-    #613a1d 90%,
-    #472712 100%
-  );
-}
 
-/* edit_roast_lightly  */
-.edit_roast_lightly {
-  color: #caa571;
-}
-/* edit_roast_dark  */
-.edit_roast_dark {
-  color: #472712;
-}
 /* edit_defects_calc */
 .edit_defects_calc {
   width: 90%;
