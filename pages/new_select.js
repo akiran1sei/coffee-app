@@ -200,7 +200,7 @@ export default function NewPage() {
                 <form
                   onSubmit={handleSubmit}
                   className={styles.edit_main}
-                  action={"Select-page.js"}
+                  action={"edit_select.js"}
                   method="post"
                 >
                   <div className={styles.edit_list}>
