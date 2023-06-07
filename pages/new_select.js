@@ -40,6 +40,14 @@ export default function NewPage() {
   const [error, setError] = useState("");
   const [result, setResult] = useState("");
 
+  const [isEditContents, setIsEditContents] = useState(false);
+  const [isRoastPoint, setIsRoastPoint] = useState(false);
+  const handlePointButton = () => {
+    setIsRoastPoint(!isRoastPoint);
+  };
+  const handleEditListButton = () => {
+    setIsEditContents(!isEditContents);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -148,9 +156,18 @@ export default function NewPage() {
         <main className={styles.main}>
           <div className={styles.edit_page}>
             <div className={`${styles.edit} ${styles.open}`}>
-              <div className={styles.edit_number}>
+              <div
+                className={
+                  isEditContents
+                    ? `${styles["edit_number"]} ${styles["active"]}`
+                    : styles["edit_number"]
+                }
+              >
                 <div className={styles.edit_toc}>
-                  <button className={styles.button}>
+                  <button
+                    className={styles.button}
+                    onClick={handleEditListButton}
+                  >
                     編集目次<span className={styles.edit_toc_open}>▼</span>
                     <span className={styles.edit_toc_close}>△</span>
                   </button>
@@ -198,7 +215,7 @@ export default function NewPage() {
                         1：珈琲豆 or 番号
                       </label>
                       <input
-                        className={styles.edit_item_name_input}
+                        className={styles.edit_input_name}
                         type="text"
                         name="coffee"
                         id="coffee"
@@ -213,11 +230,18 @@ export default function NewPage() {
                       <label htmlFor="roast" className={styles.edit_item_title}>
                         2：ロースト
                       </label>
-                      <div className={styles.edit_item_value_box}>
+                      <div
+                        className={
+                          isRoastPoint
+                            ? `${styles["edit_item_value_box"]} ${styles["active"]}`
+                            : styles["edit_item_value_box"]
+                        }
+                      >
                         <input
                           type="range"
                           name="roast"
                           id="roast"
+                          className={styles.edit_input_range}
                           value={roast}
                           list="roast_value"
                           onChange={(e) => setRoast(e.target.value)}
@@ -233,6 +257,42 @@ export default function NewPage() {
                           <option value="100">イタリアン</option>
                         </datalist>
                         <p className={styles.edit_roast_value}>{roast}%</p>
+
+                        <ul className={styles.edit_point_list}>
+                          <li className={styles.edit_point_item}>0%:ライト</li>
+                          <li className={styles.edit_point_item}>
+                            15%:シナモン
+                          </li>
+                          <li className={styles.edit_point_item}>
+                            30%:ミディアム
+                          </li>
+                          <li className={styles.edit_point_item}>45%:ハイ</li>
+                          <li className={styles.edit_point_item}>60%:シティ</li>
+                          <li className={styles.edit_point_item}>
+                            75%:フルシティ
+                          </li>
+                          <li className={styles.edit_point_item}>
+                            90%:フレンチ
+                          </li>
+                          <li className={styles.edit_point_item}>
+                            100%:イタリアン
+                          </li>
+                        </ul>
+                        <div className={styles.edit_point}>
+                          <button
+                            className={
+                              isRoastPoint
+                                ? `${styles["edit_point_btn"]} ${styles["active"]}`
+                                : styles["edit_point_btn"]
+                            }
+                            // className={styles.edit_point_btn}
+                            onClick={handlePointButton}
+                          >
+                            <span className={styles.edit_point_open}>！</span>
+                            <span className={styles.edit_point_close}>✕</span>
+                            <span className={styles.edit_point_tail}></span>
+                          </button>
+                        </div>
                       </div>
                       <div className={styles.edit_item_message_box}>
                         <label htmlFor="roast-message">memo</label>
@@ -338,7 +398,7 @@ export default function NewPage() {
                         <div className={styles.edit_defects_calc}>
                           <input
                             type="number"
-                            className={styles.edit_defects_point}
+                            className={styles.edit_input_defects}
                             value={point}
                             onChange={(e) => setPoint(e.target.value)}
                             name="point"
@@ -369,7 +429,7 @@ export default function NewPage() {
                           type="number"
                           name="defects"
                           id="defects"
-                          className={styles.edit_item_box}
+                          className={styles.edit_input_answer}
                           value={defects}
                           onChange={(e) => setDefects(e.target.value)}
                         />
@@ -403,7 +463,7 @@ export default function NewPage() {
                             type="number"
                             name="cleancap"
                             id="cleancap"
-                            className={styles.edit_item_box}
+                            className={styles.edit_select_box}
                             value={cleancap}
                             onChange={(e) => setCleancap(e.target.value)}
                           >
@@ -449,7 +509,7 @@ export default function NewPage() {
                             type="number"
                             name="sweet"
                             id="sweet"
-                            className={styles.edit_item_box}
+                            className={styles.edit_select_box}
                             value={sweet}
                             onChange={(e) => setSweet(e.target.value)}
                           >
@@ -497,7 +557,7 @@ export default function NewPage() {
                             type="number"
                             name="acidity"
                             id="acidity"
-                            className={styles.edit_item_box}
+                            className={styles.edit_select_box}
                             value={acidity}
                             onChange={(e) => setAcidity(e.target.value)}
                           >
@@ -568,7 +628,7 @@ export default function NewPage() {
                             type="number"
                             name="mouthfeel"
                             id="mouthfeel"
-                            className={styles.edit_item_box}
+                            className={styles.edit_select_box}
                             value={mouthfeel}
                             onChange={(e) => setMouthfeel(e.target.value)}
                           >
@@ -639,7 +699,7 @@ export default function NewPage() {
                             name="flavor"
                             type="number"
                             id="flavor"
-                            className={styles.edit_item_box}
+                            className={styles.edit_select_box}
                             value={flavor}
                             onChange={(e) => setFlavor(e.target.value)}
                           >
@@ -683,7 +743,7 @@ export default function NewPage() {
                             name="after"
                             type="number"
                             id="after"
-                            className={styles.edit_item_box}
+                            className={styles.edit_select_box}
                             value={after}
                             onChange={(e) => setAfter(e.target.value)}
                           >
@@ -732,7 +792,7 @@ export default function NewPage() {
                             name="balance"
                             type="number"
                             id="balance"
-                            className={styles.edit_item_box}
+                            className={styles.edit_select_box}
                             value={balance}
                             onChange={(e) => setBalance(e.target.value)}
                           >
@@ -780,7 +840,7 @@ export default function NewPage() {
                             name="overall"
                             type="number"
                             id="overall"
-                            className={styles.edit_item_box}
+                            className={styles.edit_select_box}
                             value={overall}
                             onChange={(e) => setOverall(e.target.value)}
                           >

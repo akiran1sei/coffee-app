@@ -81,7 +81,7 @@ export default function Home() {
                       1：珈琲豆 or 番号
                     </label>
                     <input
-                      className={styles.edit_item_name_input}
+                      className={styles.edit_input_name}
                       type="text"
                       name="coffee-name"
                       id=""
@@ -216,7 +216,7 @@ export default function Home() {
                       <div className={styles.edit_defects_calc}>
                         <input
                           type="number"
-                          className={styles.edit_defects_point}
+                          className={styles.edit_input_defects}
                           // value={point}
                           onChange={(e) => setPoint(e.target.value)}
                           name="point"
@@ -246,7 +246,7 @@ export default function Home() {
                       <input
                         type="number"
                         name="defects"
-                        className={styles.edit_item_box}
+                        className={styles}
                         // value={defects}
                         onChange={(e) => setDefects(e.target.value)}
                       />
@@ -279,7 +279,7 @@ export default function Home() {
                           type="number"
                           name="cleancap"
                           id=""
-                          className={styles.edit_item_box}
+                          className={styles.edit_select_box}
                           // value={cleancap}
                           onChange={(e) => setCleancap(e.target.value)}
                         >
@@ -324,7 +324,7 @@ export default function Home() {
                           type="number"
                           name="sweet"
                           id=""
-                          className={styles.edit_item_box}
+                          className={styles.edit_select_box}
                           // value={sweet}
                           onChange={(e) => setSweet(e.target.value)}
                         >
@@ -370,7 +370,7 @@ export default function Home() {
                           type="number"
                           name="acidity"
                           id=""
-                          className={styles.edit_item_box}
+                          className={styles.edit_select_box}
                           // value={acidity}
                           onChange={(e) => setAcidity(e.target.value)}
                         >
@@ -429,7 +429,7 @@ export default function Home() {
                           type="number"
                           name="mouthfeel"
                           id=""
-                          className={styles.edit_item_box}
+                          className={styles.edit_select_box}
                           // value={mouthfeel}
                           onChange={(e) => setMouthfeel(e.target.value)}
                         >
@@ -482,7 +482,7 @@ export default function Home() {
                           name="flavor"
                           type="number"
                           id=""
-                          className={styles.edit_item_box}
+                          className={styles.edit_select_box}
                           // value={flavor}
                           onChange={(e) => setFlavor(e.target.value)}
                         >
@@ -528,7 +528,7 @@ export default function Home() {
                           name="after"
                           type="number"
                           id=""
-                          className={styles.edit_item_box}
+                          className={styles.edit_select_box}
                           // value={after}
                           onChange={(e) => setAfter(e.target.value)}
                         >
@@ -574,7 +574,7 @@ export default function Home() {
                           name="balance"
                           type="number"
                           id=""
-                          className={styles.edit_item_box}
+                          className={styles.edit_select_box}
                           // value={balance}
                           onChange={(e) => setBalance(e.target.value)}
                         >
@@ -606,7 +606,7 @@ export default function Home() {
                           name="overall"
                           type="number"
                           id=""
-                          className={styles.edit_item_box}
+                          className={styles.edit_select_box}
                           // value={overall}
                           onChange={(e) => setOverall(e.target.value)}
                         >

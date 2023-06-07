@@ -339,6 +339,88 @@
   text-align: end;
 }
 
+/* -----edit_point----- */
+.edit_point {
+  width: 150px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translateX(60%);
+}
+.edit_point_open {
+  color: var(--color-font-white);
+  margin: 0;
+}
+.active.edit_point_btn > .edit_point_open {
+  display: none;
+}
+.edit_point_close {
+  display: none;
+}
+.active.edit_point_btn > .edit_point_close {
+  display: block;
+  color: var(--color-font-white);
+  margin: 0;
+}
+.edit_point_tail {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: -36%;
+  transform: translate(50%, -50%);
+  border-top: 10px solid transparent;
+  border-right: 10px solid var(--color-bg-yellow);
+  border-bottom: 10px solid transparent;
+}
+.active > .edit_point_btn > .edit_point_tail {
+  display: none;
+}
+.edit_point_btn {
+  width: 30px;
+  height: 30px;
+  background: var(--color-bg-yellow);
+  border-radius: 50%;
+  position: relative;
+  z-index: 100;
+  transform: translateX(40px);
+}
+/* .active > .edit_point_btn {
+  background: var(--color-bg-base);
+} */
+.edit_point_list {
+  display: none;
+}
+.active > .edit_point_list {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  font-size: 16px;
+  color: var(--color-font-white);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+  background: var(--color-bg-yellow);
+  padding: 1rem;
+  z-index: 0;
+}
+.edit_point_item {
+}
 /* 
 
 ----------edit_number----------
@@ -357,7 +439,7 @@
 .edit_number_list {
   display: none;
 }
-.edit.open .edit_number_list {
+.active > .edit_number_list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -442,14 +524,14 @@
 }
 
 /* edit_toc_open */
-.open .edit_toc_open {
+.active > .edit_toc > .button .edit_toc_open {
   display: none;
 }
 .edit_toc_open {
   display: inline-block;
 }
 /* edit_toc_close */
-.edit.open .edit_toc_close {
+.active > .edit_toc > .button .edit_toc_close {
   display: inline-block;
 }
 .edit_toc_close {
@@ -492,6 +574,23 @@
 
 /* 
 
+----------edit_input---------
+
+*/
+
+.edit_input_name {
+  width: 90%;
+}
+@media screen and (min-width: 1000px) {
+  .edit_input_name {
+    width: 50%;
+  }
+}
+.edit_input_range {
+  width: 200px;
+}
+/* 
+
 ----------edit_item----------
 
 */
@@ -505,7 +604,9 @@
   align-items: center;
   flex-wrap: nowrap;
   justify-content: space-between;
+  position: relative;
 }
+
 .edit_item_value {
   text-align: center;
   width: 150px;
@@ -514,6 +615,7 @@
 }
 .edit_item_value_box {
   width: 100%;
+  position: relative;
 }
 .edit_item.mouthfeel,
 .edit_item.acidity {
@@ -533,15 +635,7 @@
     width: 100% !important;
   }
 }
-/* edit_item_name_input */
-.edit_item_name_input {
-  width: 90%;
-}
-@media screen and (min-width: 1000px) {
-  .edit_item_name_input {
-    width: 50%;
-  }
-}
+
 /* edit_item_title */
 .edit_item_title {
   margin: 0.5rem 0 1rem 0;
@@ -605,8 +699,9 @@
   font-size: 60px;
   font-weight: 900;
 }
-/* edit_item_box */
-.edit_item_box {
+/* edit_select_box */
+.edit_select_box,
+.edit_input_answer {
   width: 50px;
   height: 50px;
   border: 2px solid var(--color-yellow);
